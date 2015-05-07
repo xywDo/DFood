@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/head"/>
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/search_info"
+        android:layout_margin="5dp"
+        android:hint="@string/search_info"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Spinner
+        android:id="@+id/search_type"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_weight="1"
+            android:text="@string/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
+
+    <com.xyw.dfood.listview.ZrcListView
+        android:id="@+id/food_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="5dp"
+        android:divider="#EAEAEA"/>
+
+</LinearLayout>
